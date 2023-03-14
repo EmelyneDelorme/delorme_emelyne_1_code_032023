@@ -1,0 +1,8 @@
+@import url("./colors.css");
+
+body {
+  font-family: "Montserrat";
+  color: var(--main-color);
+  margin: auto;
+  max-width: 1140px;
+}

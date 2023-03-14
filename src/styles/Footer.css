@@ -1,0 +1,18 @@
+.footer {
+  height: 150px;
+  background-color: black;
+  color: white;
+  font-size: large;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-text {
+  padding: 10px;
+}
+
+.footer-logo {
+  width: 80px;
+}
