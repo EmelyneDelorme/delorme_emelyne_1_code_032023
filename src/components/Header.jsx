@@ -4,7 +4,7 @@ import "../styles/Header.css"
 
 function Header() {
   return (
-    <div className="header">
+    <header>
       <img src={logo} alt="Kasa" className="header-logo" />
       <nav>
         <ul className="header-nav">
@@ -17,7 +17,7 @@ function Header() {
           </li>
         </ul>
       </nav>
-    </div>
+    </header>
   )
 }
 

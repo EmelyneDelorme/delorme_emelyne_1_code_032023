@@ -1,10 +1,13 @@
+import { Link } from "react-router-dom"
 import "../styles/AdCard.css"
 
 function AdCard({ id, cover, title }) {
   return (
     <li className="ad-card">
-      <img src={cover} alt={`${title} cover`} />
-      <h2>{title}</h2>
+      <Link to={"housing/" + id}>
+        <img src={cover} alt={`${title} cover`} />
+        <h2>{title}</h2>
+      </Link>
     </li>
   )
 }

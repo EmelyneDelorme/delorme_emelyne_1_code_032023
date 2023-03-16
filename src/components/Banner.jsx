@@ -1,11 +1,12 @@
-// import img from "../assets/img-banner.png"
 import "../styles/Banner.css"
 
-function Banner() {
+function Banner({ banner, title }) {
   return (
     <div className="banner">
-      <div className="banner-img"></div>
-      <h1 className="banner-title">Chez vous, partout et ailleurs</h1>
+      <div className="background">
+        <img className="banner-img" src={banner} alt="paysage" />
+      </div>
+      <h1 className="banner-title">{title}</h1>
     </div>
   )
 }

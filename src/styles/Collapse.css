@@ -1,0 +1,28 @@
+@import url("./colors.css");
+
+.collapse {
+  font-size: 25px;
+}
+
+.collapse-banner {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--main-color);
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  padding: 0px 15px;
+  font-weight: 500;
+  height: 50px;
+}
+
+.collapse-text {
+  line-height: 35px;
+  font-size: 25px;
+  font-weight: 400;
+  background-color: var(--second-color);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0;
+}

@@ -1,8 +1,9 @@
 @import url("./colors.css");
 
 .ad-card {
-  width: 350px;
-  height: 350px;
+  width: 340px;
+  height: 340px;
+  margin: 25px 0px;
   border-radius: 20px;
   background: var(--main-color);
 }

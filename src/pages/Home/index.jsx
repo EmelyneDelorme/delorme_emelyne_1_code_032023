@@ -1,18 +1,16 @@
-import { Link } from "react-router-dom"
 import Banner from "../../components/Banner"
 import AdCard from "../../components/AdCard"
 import { ads } from "../../datas/ads"
+import img from "../../assets/home-banner.png"
 import "../../styles/Home.css"
 
 function Home() {
   return (
     <div>
-      <Banner />
+      <Banner banner={img} title="Chez vous, partout ailleurs" />
       <ul className="ads-list">
         {ads.map(({ id, cover, title }) => (
-          <Link key={id} to={"housing/" + id}>
-            <AdCard cover={cover} title={title} />
-          </Link>
+          <AdCard key={id} id={id} cover={cover} title={title} />
         ))}
       </ul>
     </div>
