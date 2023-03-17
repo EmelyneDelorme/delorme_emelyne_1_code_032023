@@ -1,7 +1,7 @@
 import { useState } from "react"
 import "../styles/Collapse.css"
 
-function Collapse({ collapseTitle, collapseText }) {
+function Collapse({ children, collapseTitle }) {
   const [isOpen, setIsOpen] = useState(false)
   return isOpen ? (
     <div className="collapse">
@@ -9,7 +9,7 @@ function Collapse({ collapseTitle, collapseText }) {
         <p>{collapseTitle}</p>
         <i className="fa-sharp fa-solid fa-chevron-up"></i>
       </div>
-      <p className="collapse-text">{collapseText}</p>
+      <div className="collapse-text">{children}</div>
     </div>
   ) : (
     <div className="collapse">
