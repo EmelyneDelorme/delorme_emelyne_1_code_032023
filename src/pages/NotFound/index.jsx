@@ -1,9 +1,13 @@
-import { Link } from "react-router-dom"
-import "../../styles/NotFound.css"
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import "../../styles/NotFound.css";
 
 function NotFound() {
+  useEffect(() => {
+    document.title = "Kasa - Page inexistante";
+  }, []);
   return (
-    <div className="error-page">
+    <main className="error-page">
       <h1 className="error-title">404</h1>
       <p className="error-text">
         Oups! La page que vous demandez n'existe pas.
@@ -11,8 +15,8 @@ function NotFound() {
       <Link className="error-link" to="/">
         Retourner sur la page d'accueil
       </Link>
-    </div>
-  )
+    </main>
+  );
 }
 
-export default NotFound
+export default NotFound;

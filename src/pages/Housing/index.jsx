@@ -1,17 +1,21 @@
-// import { useEffect } from "react"
-import { useParams } from "react-router-dom"
-import Collapse from "../../components/Collapse"
-import SlideShow from "../../components/SlideShow"
-import getHousingById from "../../helpers/getHousingById"
-import "../../styles/Housing.css"
+import { useEffect } from "react";
+import { useParams } from "react-router-dom";
+import Collapse from "../../components/Collapse";
+import SlideShow from "../../components/SlideShow";
+import getHousingById from "../../helpers/getHousingById";
+import "../../styles/Housing.css";
 
 function Housing() {
-  const { id } = useParams()
-  const ad = getHousingById(id)
+  const { id } = useParams();
+  const ad = getHousingById(id);
+
+  useEffect(() => {
+    document.title = `Kasa - ${ad.title}`;
+  }, [ad.title]);
 
   return (
-    <div>
-      <SlideShow nextHousing={id} img={ad.cover} />
+    <main>
+      <SlideShow slides={ad.pictures} />
       <h1>{ad.title}</h1>
       <p>{ad.location}</p>
       <div className="housing-collapses">
@@ -26,8 +30,8 @@ function Housing() {
           </ul>
         </Collapse>
       </div>
-    </div>
-  )
+    </main>
+  );
 }
 
-export default Housing
+export default Housing;
