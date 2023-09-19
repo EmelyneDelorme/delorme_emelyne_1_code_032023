@@ -1,5 +1,63 @@
+@import url("./colors.css");
+
 .housing-collapses {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
   grid-gap: 20px;
+}
+
+.collapse-text {
+  height: 75%;
+}
+
+.collapse-text p {
+  padding: 0;
+}
+.tags {
+  list-style: none;
+  display: flex;
+  grid-gap: 20px;
+  padding: 0;
+}
+.tag {
+  color: white;
+  background-color: var(--main-color);
+  width: 150px;
+  padding: 5px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.title {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.person {
+  display: flex;
+  align-items: center;
+}
+.location {
+  margin-top: 0%;
+}
+.picture {
+  border-radius: 90px;
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+h1 {
+  margin-bottom: 0;
+}
+.name {
+  width: 100px;
+  font-size: large;
+  text-align: end;
+  margin-right: 10px;
+}
+
+main {
+  padding-bottom: 20px;
 }

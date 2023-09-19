@@ -15,13 +15,23 @@ const SlideShow = ({ slides }) => {
 
   return (
     <section className="slideshow">
-      <div className="arrows">
-        <i className="fa-sharp fa-solid fa-chevron-left" onClick={prevSlide} />
-        <i className="fa-sharp fa-solid fa-chevron-right" onClick={nextSlide} />
-      </div>
-      <p className="index">
-        {current + 1}/{length}
-      </p>
+      {length > 1 && (
+        <>
+          <div className="arrows">
+            <i
+              className="fa-sharp fa-solid fa-chevron-left"
+              onClick={prevSlide}
+            />
+            <i
+              className="fa-sharp fa-solid fa-chevron-right"
+              onClick={nextSlide}
+            />
+          </div>
+          <p className="index">
+            {current + 1}/{length}
+          </p>
+        </>
+      )}
       {slides.map((slide, index) => {
         return (
           <div key={index}>

@@ -1,8 +1,8 @@
-import { useState } from "react"
-import "../styles/Collapse.css"
+import { useState } from "react";
+import "../styles/Collapse.css";
 
 function Collapse({ children, collapseTitle }) {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
   return isOpen ? (
     <div className="collapse">
       <div className="collapse-banner" onClick={() => setIsOpen(false)}>
@@ -18,7 +18,7 @@ function Collapse({ children, collapseTitle }) {
         <i className="fas fa-chevron-down"></i>
       </div>
     </div>
-  )
+  );
 }
 
-export default Collapse
+export default Collapse;

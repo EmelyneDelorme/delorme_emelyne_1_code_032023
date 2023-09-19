@@ -16,8 +16,24 @@ function Housing() {
   return (
     <main>
       <SlideShow slides={ad.pictures} />
-      <h1>{ad.title}</h1>
-      <p>{ad.location}</p>
+      <div className="title">
+        <div>
+          <h1>{ad.title}</h1>
+          <p className="location">{ad.location}</p>
+        </div>
+        <div className="person">
+          <p className="name">{ad.host.name}</p>
+          <img className="picture" src={ad.host.picture} alt={ad.host.name} />
+        </div>
+      </div>
+
+      <ul className="tags">
+        {ad.tags.map((tag) => (
+          <li key={tag} className="tag">
+            {tag}
+          </li>
+        ))}
+      </ul>
       <div className="housing-collapses">
         <Collapse collapseTitle="Description">
           <p>{ad.description}</p>
