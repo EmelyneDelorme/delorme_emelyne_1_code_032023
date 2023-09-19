@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import Collapse from "../../components/Collapse";
 import SlideShow from "../../components/SlideShow";
 import getHousingById from "../../helpers/getHousingById";
-import "../../styles/Housing.css";
+import "../../styles/Housing.scss";
 
 function Housing() {
   const { id } = useParams();

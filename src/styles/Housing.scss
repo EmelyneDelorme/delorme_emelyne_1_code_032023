@@ -1,0 +1,60 @@
+@import url("./colors.scss");
+
+main {
+  padding-bottom: 20px;
+  .housing-collapses {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    .collapse-text {
+      height: 75%;
+    }
+    .collapse-text p {
+      padding: 0;
+    }
+  }
+
+  .tags {
+    list-style: none;
+    display: flex;
+    grid-gap: 20px;
+    padding: 0;
+    .tag {
+      color: white;
+      background-color: var(--main-color);
+      width: 150px;
+      padding: 5px;
+      border-radius: 10px;
+      text-align: center;
+    }
+  }
+
+  .title {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    h1 {
+      margin-bottom: 0;
+    }
+    .person {
+      display: flex;
+      align-items: center;
+      .picture {
+        border-radius: 90px;
+        width: 90px;
+        height: 90px;
+        object-fit: contain;
+      }
+      .name {
+        width: 100px;
+        font-size: large;
+        text-align: end;
+        margin-right: 10px;
+      }
+    }
+    .location {
+      margin-top: 0%;
+    }
+  }
+}

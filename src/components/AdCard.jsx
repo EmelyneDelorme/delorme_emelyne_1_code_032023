@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom"
-import "../styles/AdCard.css"
+import { Link } from "react-router-dom";
+import "../styles/AdCard.scss";
 
 function AdCard({ id, cover, title }) {
   return (
@@ -9,7 +9,7 @@ function AdCard({ id, cover, title }) {
         <h2>{title}</h2>
       </Link>
     </li>
-  )
+  );
 }
 
-export default AdCard
+export default AdCard;

@@ -10,12 +10,11 @@ footer {
   width: 100%;
   position: absolute;
   right: 0;
-}
+  .footer-text {
+    padding: 10px;
+  }
 
-.footer-text {
-  padding: 10px;
-}
-
-.footer-logo {
-  width: 80px;
+  .footer-logo {
+    width: 80px;
+  }
 }

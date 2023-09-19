@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Banner from "../../components/Banner";
 import Collapse from "../../components/Collapse";
 import img from "../../assets/housing-banner.png";
-import "../../styles/About.css";
+import "../../styles/About.scss";
 
 function About() {
   useEffect(() => {

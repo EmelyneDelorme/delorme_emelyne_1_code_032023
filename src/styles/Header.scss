@@ -1,0 +1,19 @@
+@import url("./colors.scss");
+
+header {
+  display: flex;
+  justify-content: space-between;
+  .header-logo {
+    width: 150px;
+  }
+  .header-nav {
+    display: flex;
+    list-style-type: none;
+    width: 180px;
+    justify-content: space-between;
+    a {
+      text-decoration: none;
+      color: var(--main-color);
+    }
+  }
+}

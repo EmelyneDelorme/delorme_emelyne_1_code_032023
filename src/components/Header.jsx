@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom"
-import logo from "../assets/logo.png"
-import "../styles/Header.css"
+import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
+import "../styles/Header.scss";
 
 function Header() {
   return (
@@ -18,7 +18,7 @@ function Header() {
         </ul>
       </nav>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;

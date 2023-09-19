@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/SlideShow.css";
+import "../styles/SlideShow.scss";
 
 const SlideShow = ({ slides }) => {
   const [current, setCurrent] = useState(0);

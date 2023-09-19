@@ -3,7 +3,7 @@ import Banner from "../../components/Banner";
 import AdCard from "../../components/AdCard";
 import { ads } from "../../datas/ads";
 import img from "../../assets/home-banner.png";
-import "../../styles/Home.css";
+import "../../styles/Home.scss";
 
 function Home() {
   useEffect(() => {

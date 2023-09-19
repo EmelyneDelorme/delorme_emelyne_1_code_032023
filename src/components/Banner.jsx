@@ -1,4 +1,4 @@
-import "../styles/Banner.css"
+import "../styles/Banner.scss";
 
 function Banner({ banner, title }) {
   return (
@@ -8,7 +8,7 @@ function Banner({ banner, title }) {
       </div>
       <h1 className="banner-title">{title}</h1>
     </div>
-  )
+  );
 }
 
-export default Banner
+export default Banner;
