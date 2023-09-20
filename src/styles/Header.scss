@@ -1,4 +1,4 @@
-@import url("./colors.scss");
+@import "colors";
 
 header {
   display: flex;
@@ -13,7 +13,7 @@ header {
     justify-content: space-between;
     a {
       text-decoration: none;
-      color: var(--main-color);
+      color: $main-color;
     }
   }
 }

@@ -1,4 +1,4 @@
-@import url("./colors.scss");
+@import "colors";
 
 .error-page {
   text-align: center;
@@ -24,6 +24,6 @@
   .error-link {
     position: absolute;
     bottom: 60px;
-    color: var(--main-color);
+    color: $main-color;
   }
 }

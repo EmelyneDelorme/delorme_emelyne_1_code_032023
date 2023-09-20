@@ -1,4 +1,4 @@
-@import url("./colors.scss");
+@import "colors";
 
 .slideshow {
   margin-top: 30px;
@@ -37,14 +37,14 @@
   .fa-chevron-left,
   .fa-chevron-right,
   .index {
-    background-color: var(--main-color);
+    background-color: $main-color;
     border-radius: 30px;
     width: 50px;
     text-align: center;
     padding: 5px;
   }
-
-  .slide {
-    object-fit: cover;
+  
+ .slide {
+   object-fit: cover;
   }
 }

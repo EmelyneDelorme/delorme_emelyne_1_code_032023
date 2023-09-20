@@ -1,11 +1,11 @@
-@import url("./colors.scss");
+@import "colors";
 
 .collapse {
   font-size: 25px;
   .collapse-banner {
     display: flex;
     flex-direction: row;
-    background-color: var(--main-color);
+    background-color: $main-color;
     color: white;
     justify-content: space-between;
     align-items: center;
@@ -19,7 +19,7 @@
     line-height: 35px;
     font-size: 25px;
     font-weight: 400;
-    background-color: var(--second-color);
+    background-color: $second-color;
     border-radius: 5px;
     padding: 20px;
     margin: 0;

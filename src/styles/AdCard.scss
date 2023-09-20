@@ -1,11 +1,11 @@
-@import url("./colors.scss");
+@import "colors";
 
 .ad-card {
   width: 340px;
   height: 340px;
   margin: 25px 0px;
   border-radius: 20px;
-  background: var(--main-color);
+  background: $main-color;
   a {
     text-decoration: none;
   }
