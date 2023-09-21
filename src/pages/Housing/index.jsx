@@ -8,6 +8,9 @@ import "../../styles/Housing.scss";
 function Housing() {
   const { id } = useParams();
   const ad = getHousingById(id);
+  const rating = ad.rating;
+  const stars = Array(5).fill("full", 0,rating).fill("empty", rating, 5)
+  console.log(stars)
 
   useEffect(() => {
     document.title = `Kasa - ${ad.title}`;
@@ -26,7 +29,7 @@ function Housing() {
           <img className="picture" src={ad.host.picture} alt={ad.host.name} />
         </div>
       </div>
-
+    <div className="tags-rating">
       <ul className="tags">
         {ad.tags.map((tag) => (
           <li key={tag} className="tag">
@@ -34,6 +37,14 @@ function Housing() {
           </li>
         ))}
       </ul>
+      <ul className="rating">
+        {stars.map((star, i)=>(
+          <li key={i}>
+            {star==="full" ? <i className="fa-solid fa-star"></i> : <i className="fa-regular fa-star"></i>}
+            </li>
+        ))}
+      </ul>
+      </div>
       <div className="housing-collapses">
         <Collapse collapseTitle="Description">
           <p>{ad.description}</p>
