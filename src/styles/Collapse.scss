@@ -25,3 +25,12 @@
     margin: 0;
   }
 }
+
+.rotate-down {
+  transition: transform 0.5s ease;
+}
+
+.rotate-up {
+  transition: transform 0.5s ease;
+  transform: rotate(180deg);
+}

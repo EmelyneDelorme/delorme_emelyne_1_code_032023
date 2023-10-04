@@ -3,20 +3,21 @@ import "../styles/Collapse.scss";
 
 function Collapse({ children, collapseTitle }) {
   const [isOpen, setIsOpen] = useState(false);
-  return isOpen ? (
+
+  // Fonction pour basculer l'état isOpen
+  const toggleCollapse = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const arrowClass = isOpen ? "rotate-up" : "rotate-down";
+
+  return (
     <div className="collapse">
-      <div className="collapse-banner" onClick={() => setIsOpen(false)}>
+      <div className="collapse-banner" onClick={toggleCollapse}>
         <p>{collapseTitle}</p>
-        <i className="fa-sharp fa-solid fa-chevron-up"></i>
+        <i className={`fas fa-chevron-down ${arrowClass}`}></i>
       </div>
-      <div className="collapse-text">{children}</div>
-    </div>
-  ) : (
-    <div className="collapse">
-      <div className="collapse-banner" onClick={() => setIsOpen(true)}>
-        <p>{collapseTitle}</p>
-        <i className="fas fa-chevron-down"></i>
-      </div>
+      {isOpen && <div className="collapse-text">{children}</div>}
     </div>
   );
 }
