@@ -34,7 +34,7 @@ const SlideShow = ({ slides }) => {
       )}
       {slides.map((slide, index) => {
         return (
-          <div key={index}>
+          <div className="div-slide" key={index}>
             {index === current && <img src={slide} alt="" className="slide" />}
           </div>
         );

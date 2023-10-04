@@ -9,8 +9,8 @@ function Housing() {
   const { id } = useParams();
   const ad = getHousingById(id);
   const rating = ad.rating;
-  const stars = Array(5).fill("full", 0,rating).fill("empty", rating, 5)
-  console.log(stars)
+  const stars = Array(5).fill("full", 0, rating).fill("empty", rating, 5);
+  console.log(stars);
 
   useEffect(() => {
     document.title = `Kasa - ${ad.title}`;
@@ -19,31 +19,37 @@ function Housing() {
   return (
     <main>
       <SlideShow slides={ad.pictures} />
-      <div className="title">
-        <div>
-          <h1>{ad.title}</h1>
-          <p className="location">{ad.location}</p>
+      <div className="intro">
+        <div className="title-tags">
+          <div>
+            <h1>{ad.title}</h1>
+            <p className="location">{ad.location}</p>
+          </div>
+          <ul className="tags">
+            {ad.tags.map((tag) => (
+              <li key={tag} className="tag">
+                {tag}
+              </li>
+            ))}
+          </ul>
         </div>
-        <div className="person">
-          <p className="name">{ad.host.name}</p>
-          <img className="picture" src={ad.host.picture} alt={ad.host.name} />
+        <div className="person-rating">
+          <div className="person">
+            <p className="name">{ad.host.name}</p>
+            <img className="picture" src={ad.host.picture} alt={ad.host.name} />
+          </div>
+          <ul className="rating">
+            {stars.map((star, i) => (
+              <li key={i}>
+                {star === "full" ? (
+                  <i className="fa-solid fa-star"></i>
+                ) : (
+                  <i className="fa-regular fa-star"></i>
+                )}
+              </li>
+            ))}
+          </ul>
         </div>
-      </div>
-    <div className="tags-rating">
-      <ul className="tags">
-        {ad.tags.map((tag) => (
-          <li key={tag} className="tag">
-            {tag}
-          </li>
-        ))}
-      </ul>
-      <ul className="rating">
-        {stars.map((star, i)=>(
-          <li key={i}>
-            {star==="full" ? <i className="fa-solid fa-star"></i> : <i className="fa-regular fa-star"></i>}
-            </li>
-        ))}
-      </ul>
       </div>
       <div className="housing-collapses">
         <Collapse collapseTitle="Description">

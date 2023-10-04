@@ -12,7 +12,7 @@ function Home() {
 
   return (
     <main>
-      <Banner banner={img} title="Chez vous, partout ailleurs" />
+      <Banner banner={img} title="Chez vous, partout et ailleurs" />
       <ul className="ads-list">
         {ads.map(({ id, cover, title }) => (
           <AdCard key={id} id={id} cover={cover} title={title} />

@@ -33,11 +33,11 @@
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 780px) {
   .banner-title {
-    padding-top: 50px;
-    text-align: start;
-    font-size: 40px;
-    margin: 20px;
+    font-size: x-large !important;
+    padding-left: 10px;
+    width: 60% !important;
+    text-align: start !important;
   }
 }

@@ -2,6 +2,7 @@
 
 main {
   padding-bottom: 20px;
+  width: 100%;
   .housing-collapses {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -14,59 +15,87 @@ main {
       padding: 0;
     }
   }
-.tags-rating{
-  display: flex;
-  justify-content: space-between;
-  .tags {
-    list-style: none;
+  .intro {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-gap: 20px;
-    padding: 0;
-    .tag {
-      color: white;
-      background-color: $main-color;
-      width: 150px;
-      padding: 5px;
-      border-radius: 10px;
-      text-align: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    width: 100%;
+    .person-rating {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .person {
+        display: flex;
+        align-items: center;
+        .picture {
+          border-radius: 90px;
+          width: 90px;
+          height: 90px;
+          object-fit: contain;
+        }
+        .name {
+          width: 100px;
+          font-size: large;
+          text-align: end;
+          margin-right: 10px;
+        }
+      }
+    }
+    .rating {
+      list-style: none;
+      display: flex;
+      font-size: x-large;
+      width: 20%;
+      justify-content: space-between;
+      padding: 0;
+      align-self: center;
+      padding-right: 20px;
     }
   }
-  .rating{
-    list-style: none;
-    display: flex;
-    font-size:x-large;
-    width: 20%;
-    justify-content: space-between;
-   }
-  }
 
-  .title {
-    margin-top: 10px;
+  .title-tags {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     h1 {
       margin-bottom: 0;
     }
-    .person {
-      display: flex;
-      align-items: center;
-      .picture {
-        border-radius: 90px;
-        width: 90px;
-        height: 90px;
-        object-fit: contain;
-      }
-      .name {
-        width: 100px;
-        font-size: large;
-        text-align: end;
-        margin-right: 10px;
-      }
-    }
     .location {
       margin-top: 0%;
+    }
+    .tags {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: left;
+      align-items: center;
+      grid-gap: 20px;
+      padding: 0;
+      .tag {
+        color: white;
+        background-color: $main-color;
+        width: 150px;
+        padding: 5px;
+        border-radius: 10px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .housing-collapses {
+    display: flex !important;
+    flex-direction: column;
+  }
+  .intro {
+    flex-direction: column;
+  }
+  .person-rating {
+    flex-direction: row-reverse !important;
+    padding: 10px 0px;
+    .rating {
+      width: auto !important;
     }
   }
 }
