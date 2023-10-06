@@ -1,14 +1,28 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Banner from "../../components/Banner";
 import AdCard from "../../components/AdCard";
-import { ads } from "../../datas/ads";
 import img from "../../assets/home-banner.png";
 import "../../styles/Home.scss";
+import getHousings from "../../helpers/getHousings";
 
 function Home() {
+  const [ads, setAds] = useState([]);
+
   useEffect(() => {
     document.title = "Kasa - Accueil";
   }, []);
+
+  const setHousings = async () => {
+    try {
+      const data = await getHousings();
+      setAds(data);
+    } catch {
+      console.log("erreur");
+    }
+  };
+  useEffect(() => {
+    setHousings();
+  }, [setAds]);
 
   return (
     <main>

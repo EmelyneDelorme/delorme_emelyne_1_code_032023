@@ -6,7 +6,7 @@
   height: 74vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   position: relative;
   .error-title {
@@ -25,5 +25,17 @@
     position: absolute;
     bottom: 60px;
     color: $main-color;
+  }
+}
+@media screen and (max-width: 780px) {
+  .error-page {
+    height: 90vh !important;
+    justify-content: center;
+    .error-title {
+      font-size: 100px !important;
+    }
+    .error-text {
+      font-size: 25px !important;
+    }
   }
 }

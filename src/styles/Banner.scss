@@ -34,10 +34,19 @@
 }
 
 @media screen and (max-width: 780px) {
-  .banner-title {
-    font-size: x-large !important;
-    padding-left: 10px;
-    width: 60% !important;
-    text-align: start !important;
+  .banner {
+    height: 125px;
+    margin: 30px auto;
+    width: auto !important;
+    .banner-img {
+      height: 125px;
+    }
+    .banner-title {
+      font-size: x-large !important;
+      padding-left: 10px;
+      width: 70% !important;
+      text-align: start !important;
+      padding-top: 30px !important;
+    }
   }
 }
