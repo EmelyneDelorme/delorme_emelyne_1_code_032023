@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Collapse from "../../components/Collapse";
 import SlideShow from "../../components/SlideShow";
@@ -7,15 +7,47 @@ import "../../styles/Housing.scss";
 
 function Housing() {
   const { id } = useParams();
-  const ad = getHousingById(id);
-  const rating = ad.rating;
-  const stars = Array(5).fill("full", 0, rating).fill("empty", rating, 5);
-  console.log(stars);
+  const [ad, setAd] = useState(null);
+
+  const getStars = () => {
+    const stars = Array(5)
+      .fill("full", 0, ad.rating)
+      .fill("empty", ad.rating, 5);
+
+    return (
+      <ul className="rating">
+        {stars.map((star, i) => (
+          <li key={i}>
+            {star === "full" ? (
+              <i className="fa-solid fa-star"></i>
+            ) : (
+              <i className="fa-regular fa-star"></i>
+            )}
+          </li>
+        ))}
+      </ul>
+    );
+  };
 
   useEffect(() => {
-    document.title = `Kasa - ${ad.title}`;
-  }, [ad.title]);
+    document.title = `KASA - ${ad?.title}`;
+  }, [ad]);
 
+  useEffect(() => {
+    const setHousing = async () => {
+      try {
+        const data = await getHousingById(id);
+        setAd(data);
+      } catch {
+        console.log("erreur");
+      }
+    };
+    setHousing();
+  }, [id]);
+
+  if (!ad) {
+    return <h1>Chargement en cours</h1>;
+  }
   return (
     <main>
       <SlideShow slides={ad.pictures} />
@@ -38,17 +70,7 @@ function Housing() {
             <p className="name">{ad.host.name}</p>
             <img className="picture" src={ad.host.picture} alt={ad.host.name} />
           </div>
-          <ul className="rating">
-            {stars.map((star, i) => (
-              <li key={i}>
-                {star === "full" ? (
-                  <i className="fa-solid fa-star"></i>
-                ) : (
-                  <i className="fa-regular fa-star"></i>
-                )}
-              </li>
-            ))}
-          </ul>
+          {ad.rating && getStars()}
         </div>
       </div>
       <div className="housing-collapses">

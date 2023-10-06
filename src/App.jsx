@@ -1,10 +1,10 @@
-import { Route, Routes } from "react-router-dom"
-import Header from "./components/Header"
-import Footer from "./components/Footer"
-import Home from "./pages/Home"
-import Housing from "./pages/Housing"
-import About from "./pages/About"
-import NotFound from "./pages/NotFound"
+import { Route, Routes } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Housing from "./pages/Housing";
+import About from "./pages/About";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
       </Routes>
       <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

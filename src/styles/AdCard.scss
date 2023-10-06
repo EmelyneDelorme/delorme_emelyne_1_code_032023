@@ -5,7 +5,15 @@
   height: 340px;
   margin: 25px 0px;
   border-radius: 10px;
-  background: $main-color;
+  background: linear-gradient(
+    $main-color,
+    $main-color,
+    $main-color,
+    $main-color,
+    $main-color,
+    $main-color,
+    rgba(124, 55, 55, 1)
+  );
   a {
     text-decoration: none;
   }

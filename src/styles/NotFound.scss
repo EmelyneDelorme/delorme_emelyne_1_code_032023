@@ -6,9 +6,9 @@
   height: 74vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  position: relative;
+
   .error-title {
     font-size: 290px;
     font-weight: 700;
@@ -18,12 +18,10 @@
   .error-text {
     font-size: 35px;
     font-weight: 500;
-    margin: 0;
+    margin: 20px 0;
   }
 
   .error-link {
-    position: absolute;
-    bottom: 60px;
     color: $main-color;
   }
 }
