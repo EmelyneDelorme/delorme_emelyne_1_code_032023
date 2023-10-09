@@ -5,7 +5,10 @@ body {
   color: $main-color;
   margin: auto;
   max-width: 1240px;
-  min-height: 100vh;
   padding-top: 25px;
   padding: 10px;
+}
+
+main {
+  min-height: 70vh;
 }

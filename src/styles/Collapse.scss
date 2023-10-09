@@ -34,3 +34,12 @@
   transition: transform 0.5s ease;
   transform: rotate(180deg);
 }
+
+@media screen and (max-width: 780px) {
+  .collapse {
+    font-size: 18px;
+    .collapse-text {
+      font-size: 15px;
+    }
+  }
+}
