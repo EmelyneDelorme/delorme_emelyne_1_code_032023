@@ -4,6 +4,7 @@ import Collapse from "../../components/Collapse";
 import SlideShow from "../../components/SlideShow";
 import getHousingById from "../../helpers/getHousingById";
 import "../../styles/Housing.scss";
+import NotFound from "../NotFound";
 
 function Housing() {
   const { id } = useParams();
@@ -46,7 +47,7 @@ function Housing() {
   }, [id]);
 
   if (!ad) {
-    return <h1>Chargement en cours</h1>;
+    return <NotFound />;
   }
   return (
     <main>
